@@ -1,4 +1,4 @@
-package Exercise3_b;
+package Exercise3_B;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -33,13 +33,16 @@ public class Gui extends Application {
 
         int x1 = 50;
         int x2 = 180;
-        int y = 50;
+        int y =  20;
         int lineCount = 0;
         int gap = 40;
-        while (lineCount <= 4)
-        {
+        while (lineCount <= 4) {
             gc.strokeLine(x1, y, x2, y);
-            y += gap;
+            if (lineCount == 0) {
+                y += gap + 20; // Øger mellemrummet af den første linje
+            } else {
+                y += gap;
+            }
             lineCount++;
         }
     }
