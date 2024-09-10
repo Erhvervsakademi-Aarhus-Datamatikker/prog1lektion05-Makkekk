@@ -1,4 +1,4 @@
-package Exercise3_B;
+package Exercise4.c;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -31,19 +31,17 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        int x1 = 50;
-        int x2 = 180;
-        int y =  20;
-        int lineCount = 0;
-        int gap = 40;
-        while (lineCount <= 4) {
-            gc.strokeLine(x1, y, x2, y);
-            if (lineCount == 0) {
-                y += gap + 20; // Øger mellemrummet af den første linje
-            } else {
-                y += gap;
+       int x = 100;
+       int y = 50;
+       int r = 30; // Breden
+       int r2 = 70; // højden
+
+
+       while (r <= 100) {
+           gc.strokeOval((x - r/2), y, r, r2);
+           r += 10;
+       }
             }
-            lineCount++;
         }
-    }
-}
+
+

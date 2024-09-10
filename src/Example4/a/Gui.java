@@ -1,4 +1,4 @@
-package Example4;
+package Example4.a;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -33,11 +33,9 @@ public class Gui extends Application {
 
         int x1 = 20;
         int y1 = 190;
-
         int x2 = 180;
         int y2 = 10;
-        while (x1 <= 180) ;
-        {
+        while (x1 <= 180) {
             gc.strokeLine(x1, y1, x2, y2);
             x1 = x1 + 40;
             x2 = x2 - 40;

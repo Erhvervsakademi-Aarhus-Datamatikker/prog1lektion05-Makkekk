@@ -1,10 +1,9 @@
-package Exercise1;
+package Exercise4.b;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -32,25 +31,24 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        int x = 50;
-        int y = 30;
+        int startX = 0;
+        int startY = 100;
+        int r = 12;
+        int forøgelse = 1;
+        int nummerCirkel = 8;
 
-        int x1 = 25;
-        int y1 = 140;
+        int i = 1;
 
-        int x2 = 20;
-        int y2 = 50;
+        while (i < nummerCirkel) {
+            int nuværendeRadius = r * i * forøgelse; // nuværende radius
 
-        int sizeHøjde = 20;
-        int sizeBrede = 20;
+            //Ryk cirklen mod højre
+            int x = startX + (i * r * forøgelse);
 
-        gc.strokeLine(x, y, x + sizeBrede, y - sizeHøjde);
-        gc.strokeLine(x, y, x + sizeHøjde, y + sizeBrede);
+            gc.strokeOval(x - nuværendeRadius, startY - nuværendeRadius, 2 * nuværendeRadius, 2 * nuværendeRadius);
+            i++;
 
-        gc.strokeLine(x1, y1 , x1 + sizeHøjde, y1 - sizeHøjde);
-        gc.strokeLine(x1, y1 ,x1 + sizeHøjde, y1 + sizeBrede);
+        }
 
-        gc.strokeLine(x2, y2, x2 + sizeHøjde, y2 - sizeBrede);
-        gc.strokeLine(x2 , y2, x2 + sizeBrede, y2 + sizeHøjde);
     }
 }

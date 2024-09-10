@@ -1,10 +1,9 @@
-package Exercise1;
+package Exercise3.c;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -32,25 +31,29 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        int x = 50;
-        int y = 30;
+        int canvasWidth = 200;
+        int x1 = 80;
+        int x2 = 100;
+        int y =  20;
+        int lineCount = 0;
+        int gap = 40;
 
-        int x1 = 25;
-        int y1 = 140;
 
-        int x2 = 20;
-        int y2 = 50;
+        while (lineCount <= 4) { //Lav linjer indtil der er 4
 
-        int sizeHøjde = 20;
-        int sizeBrede = 20;
+            //Find ud af hvor starts positionen for x1 er for at centrere
+          int linjeLængde = x2 - x1;
+          int centreretX1 = (canvasWidth - linjeLængde) / 2;
+            gc.strokeLine(centreretX1, y, centreretX1 + linjeLængde, y);
 
-        gc.strokeLine(x, y, x + sizeBrede, y - sizeHøjde);
-        gc.strokeLine(x, y, x + sizeHøjde, y + sizeBrede);
+            if (lineCount == 0) { //Er lige med linje 1.
+                y += gap + 20; // Øger mellemrummet af den første linje
+            } else {
+                y += gap; //Lav normale gaps som er givet i variablerne
+            }
 
-        gc.strokeLine(x1, y1 , x1 + sizeHøjde, y1 - sizeHøjde);
-        gc.strokeLine(x1, y1 ,x1 + sizeHøjde, y1 + sizeBrede);
-
-        gc.strokeLine(x2, y2, x2 + sizeHøjde, y2 - sizeBrede);
-        gc.strokeLine(x2 , y2, x2 + sizeBrede, y2 + sizeHøjde);
+            x2 += 40; // øger længden af hver linje
+            lineCount++;
+        }
     }
 }

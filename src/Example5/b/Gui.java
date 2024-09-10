@@ -1,10 +1,9 @@
-package Exercise1;
+package Example5.b;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -32,25 +31,17 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
+        // In cirkel med center i 90, 110 og med en radius på 40
+        //Udregningen er som følge for (90-40, 110-40) = (50,70)
+
+        // gc.strokeOval(50, 70, 80, 80); hvis du har alle kordinator ellers se følgende
+
         int x = 50;
-        int y = 30;
+        int y = 70;
+        int r = 40;
+        gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
 
-        int x1 = 25;
-        int y1 = 140;
+        }
 
-        int x2 = 20;
-        int y2 = 50;
-
-        int sizeHøjde = 20;
-        int sizeBrede = 20;
-
-        gc.strokeLine(x, y, x + sizeBrede, y - sizeHøjde);
-        gc.strokeLine(x, y, x + sizeHøjde, y + sizeBrede);
-
-        gc.strokeLine(x1, y1 , x1 + sizeHøjde, y1 - sizeHøjde);
-        gc.strokeLine(x1, y1 ,x1 + sizeHøjde, y1 + sizeBrede);
-
-        gc.strokeLine(x2, y2, x2 + sizeHøjde, y2 - sizeBrede);
-        gc.strokeLine(x2 , y2, x2 + sizeBrede, y2 + sizeHøjde);
     }
-}
+

@@ -1,4 +1,4 @@
-package Exercise3_A;
+package Exercise4.a;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -31,13 +31,15 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        int x = 20;
-        int y1 = 30;
-        int y2 = 180;
-        while (x <= 150)
-        {
-            gc.strokeLine(x, y1, x, y2);
-            x += 50;
+        int x = 100;
+        int y = 100;
+        int r = 20;
+        int forøgelse = 20;
+
+        while (r <= 100) {
+            gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
+            r = r + forøgelse;
         }
     }
 }
+

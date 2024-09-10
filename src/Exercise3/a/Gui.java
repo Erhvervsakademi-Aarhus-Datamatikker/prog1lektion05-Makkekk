@@ -1,4 +1,4 @@
-package Exercise3_C;
+package Exercise3.a;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -31,29 +31,13 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        int canvasWidth = 200;
-        int x1 = 80;
-        int x2 = 100;
-        int y =  20;
-        int lineCount = 0;
-        int gap = 40;
-
-
-        while (lineCount <= 4) { //Lav linjer indtil der er 4
-
-            //Find ud af hvor starts positionen for x1 er for at centrere
-          int linjeLængde = x2 - x1;
-          int centreretX1 = (canvasWidth - linjeLængde) / 2;
-            gc.strokeLine(centreretX1, y, centreretX1 + linjeLængde, y);
-
-            if (lineCount == 0) { //Er lige med linje 1.
-                y += gap + 20; // Øger mellemrummet af den første linje
-            } else {
-                y += gap; //Lav normale gaps som er givet i variablerne
-            }
-
-            x2 += 40; // øger længden af hver linje
-            lineCount++;
+        int x = 20;
+        int y1 = 30;
+        int y2 = 180;
+        while (x <= 150)
+        {
+            gc.strokeLine(x, y1, x, y2);
+            x += 50;
         }
     }
 }
