@@ -1,10 +1,9 @@
-package Exercise1;
+package Exercise2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -31,26 +30,13 @@ public class Gui extends Application {
 
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
-
-        int x = 50;
-        int y = 30;
-
-        int x1 = 25;
-        int y1 = 140;
-
-        int x2 = 20;
-        int y2 = 50;
-
-        int sizeHøjde = 8;
-        int sizeBrede = 10;
-
-        gc.strokeLine(x, y, x + sizeBrede, y - sizeHøjde);
-        gc.strokeLine(x, y, x + sizeHøjde, y + sizeBrede);
-
-        gc.strokeLine(x1, y1 , x1 + sizeHøjde, y1 - sizeHøjde);
-        gc.strokeLine(x1, y1 , + sizeHøjde, y1 + sizeBrede);
-
-        gc.strokeLine(x2, y2, x2 + sizeBrede, y2 - sizeHøjde);
-        gc.strokeLine(x2 , y2, x2 + sizeHøjde, y2 + sizeBrede);
+       int x1 = 100;
+       int y1 = 100;
+       int x2 = 20;
+       int y2 = 10;
+       while (x2 <= 180) {
+           gc.strokeLine(x1, y1, x2, y2);
+           x2 = x2 + 20;
+       }
     }
 }

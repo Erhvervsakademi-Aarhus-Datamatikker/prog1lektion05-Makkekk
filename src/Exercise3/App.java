@@ -1,0 +1,9 @@
+package Exercise3;
+
+import javafx.application.Application;
+
+public class App {
+    public static void main(String[] args) {
+        Application.launch(Exercise3.Gui.class);
+    }
+}
