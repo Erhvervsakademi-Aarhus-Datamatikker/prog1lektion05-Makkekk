@@ -1,6 +1,5 @@
 package Exercise3_b;
 
-import Exercise3.Gui;
 import javafx.application.Application;
 
 public class App {
