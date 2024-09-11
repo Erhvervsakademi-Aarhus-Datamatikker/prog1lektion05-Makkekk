@@ -1,4 +1,4 @@
-package Exercise5;
+package Example7;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -31,21 +31,11 @@ public class Gui extends Application {
     private void drawShapes(GraphicsContext gc) {
         // Replace the statement here with your code.
 
-        String str = "Datamatiker";
-int i = 1;
-int wordlængde = 11;
-int x = 50;
-int y = 10;
-
-while (i<= wordlængde) {
-    gc.fillText(str.substring(0, i),x, y);
-    i++;
-    y += 10;
-}
-
+        int y1 = 30;
+        int y2 = 60;
+        for (int i = 0; i < 20; i++) {
+            int x = 10 + i * 8;
+            gc.strokeLine(x, y1, x, y2);
+        }
     }
 }
-
-
-
-
