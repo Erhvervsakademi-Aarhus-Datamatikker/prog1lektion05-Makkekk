@@ -52,8 +52,8 @@ public class Gui extends Application {
 
         //TAl
         gc.fillText("0", 15 , 190);
-        gc.fillText("15", 95, 190);
-        gc.fillText("10",175, 190);
+        gc.fillText("10", 95, 190);
+        gc.fillText("15",175, 190);
 
         for (int i = 0; i < 3; i++) {
             int x2 = 10 + i * 80;
@@ -64,7 +64,3 @@ public class Gui extends Application {
         }
     }
 }
-
-
-
-

@@ -1,10 +1,9 @@
-package Exercise10;
+package Example8.a;
 
-import Exercise9.Gui;
 import javafx.application.Application;
 
 public class App {
     public static void main(String[] args) {
-        Application.launch(Exercise10.Gui.class);
+        Application.launch(Example8.a.Gui.class);
     }
 }

@@ -1,4 +1,4 @@
-package Exercise10;
+package Example8.bmetode;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -28,22 +28,20 @@ public class Gui extends Application {
 
     // ------------------------------------------------------------------------
 
-    private void drawShapes(GraphicsContext gc) {
+    private void drawring(GraphicsContext gc, int x, int y) {
         // Replace the statement here with your code.
 
-        this.DrawCircle(gc, 50, 100, 40);
-
+        int r1 = 25;
+        int r2 = 20;
+        int r3 = 6;
+        gc.strokeOval(x - r1, y - r1, 2 * r1, 2 * r1);
+        gc.strokeOval(x - r2, y - r2, 2 * r2, 2 * r2);
+        gc.fillOval(x - r3, y - r1 - r3 / 2, 2 * r3, r3);
     }
+        private void drawShapes (GraphicsContext gc) {
+        this.drawring(gc, 40,40);
+        this.drawring(gc, 120, 80);
 
-    private void DrawCircle(GraphicsContext gc, int x, int y, int r) {
-        while (x <= 150) {
-            gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
-            x = x + 25;
-        }
 
     }
 }
-
-
-
-

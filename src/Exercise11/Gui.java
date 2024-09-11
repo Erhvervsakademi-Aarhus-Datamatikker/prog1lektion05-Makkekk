@@ -1,4 +1,4 @@
-package Exercise10;
+package Exercise11;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -36,13 +36,26 @@ public class Gui extends Application {
     }
 
     private void DrawCircle(GraphicsContext gc, int x, int y, int r) {
+
         while (x <= 150) {
             gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
-            x = x + 25;
+
+            this.DrawCross(gc, x, y, 20);
+            x += 25;
+
+        }
+    }
+        private void DrawCross(GraphicsContext gc, int x, int y, int w) {
+
+            //Den horisontale linje
+            gc.strokeLine(x - w / 2, y, x + w / 2, y);
+
+            // Vertikale linje
+            gc.strokeLine(x, y - w / 2, x, y + w / 2);
         }
 
     }
-}
+
 
 
 
