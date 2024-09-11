@@ -1,4 +1,4 @@
-package Exercise4.c;
+package Exercise5;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
